@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <!-- Real Values-->
+    <!--
+    <arg name="init_pan" default="60.0" />
+    <arg name="init_tilt" default="55.0" />
+    -->
+    <!-- Sim Values-->
+    <arg name="init_pan" default="0.0" />
+    <arg name="init_tilt" default="0.0" />
+
+    <node name="face_tracker_node"
+          pkg="pan_and_tilt_control"
+          type="face_tracker.py"
+          respawn="false"
+          output="screen"
+          args="$(arg init_pan) $(arg init_tilt)">
+    </node>
+</launch>
